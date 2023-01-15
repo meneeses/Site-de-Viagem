@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Travel</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="java/animate.js"></script>
+    <link rel="shortcut icon" type="imagex/png" href="/images/icone.ico">
+</head>
+<body>
+    <section>
+        <div class="bannerVideo" id="slideShow">
+            <video src="video/video1.mp4" autoplay muted loop class="active"></video>
+            <video src="video/video2.mp4" autoplay muted loop></video>
+            <video src="video/video3.mp4" autoplay muted loop></video>
+            <video src="video/video4.mp4" autoplay muted loop></video>
+        </div>
+        <div class="container">
+            <header id="navbar">
+                <a href="#" class="logo">World</a>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Destino</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Contato</a></li>
+
+                </ul>
+            </header>
+            <div class="content">
+                <div class="bannerText" id="slideShowText">
+                    <div class="active">
+                        <h2>Austrália</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro nostrum accusantium illo autem, 
+                        pariatur et perferendis incidunt ratione non odio officia deserunt cupiditate quidem! Ipsa, tenetur officia?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro  perferendis incidunt ratione non odio officia deserunt cupiditate quidem! 
+                        Ipsa, tenetur officia? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <h2>Paris</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro nostrum accusantium illo autem, 
+                        pariatur et perferendis incidunt ratione non odio officia deserunt cupiditate quidem! Ipsa, tenetur officia?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro  perferendis incidunt ratione non odio officia deserunt cupiditate quidem! 
+                        Ipsa, tenetur officia? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <h2>Israel</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro nostrum accusantium illo autem, 
+                        pariatur et perferendis incidunt ratione non odio officia deserunt cupiditate quidem! Ipsa, tenetur officia?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro  perferendis incidunt ratione non odio officia deserunt cupiditate quidem! 
+                        Ipsa, tenetur officia? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                    <div>
+                        <h2>Maldivas</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro nostrum accusantium illo autem, 
+                        pariatur et perferendis incidunt ratione non odio officia deserunt cupiditate quidem! Ipsa, tenetur officia?
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ut fuga porro  perferendis incidunt ratione non odio officia deserunt cupiditate quidem! 
+                        Ipsa, tenetur officia? Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+            <ul class="sci">
+                <li><a href="#"><img src="images/facebook.png"></a></li>
+                <li><a href="#"><img src="images/twitter.png"></a></li>
+                <li><a href="#"><img src="images/instagram.png"></a></li>
+            </ul>
+
+            <ul class="controls">
+                <li onclick="prevSlide();prevSlideText();"><img src="images/left.png"></li>
+                <li onclick="nextSlide();nextSlideText();"><img src="images/right.png"></li>
+            </ul>
+        </div>
+    </section>
+
+    <script> 
+    const slideShow = document.getElementById('slideShow');
+    const slides = slideShow.getElementsByTagName('video')
+    var index = 0;
+
+    function nextSlide(){
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }
+    function prevSlide(){
+        slides[index].classList.remove('active');
+        index = (index - 1 + slides.length) % slides.length;
+        slides[index].classList.add('active');
+    }
+
+
+    const slideShowText = document.getElementById('slideShowText');
+    const slidesText = slideShowText.getElementsByTagName('div')
+    var i = 0;
+
+    function nextSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i + 1) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+    function prevSlideText(){
+        slidesText[i].classList.remove('active');
+        i = (i - 1 + slidesText.length) % slidesText.length;
+        slidesText[i].classList.add('active');
+    }
+
+    function toggleMenu(){
+        const menu = document.querySelector('.menuIcon');
+        const navbar = document.getElementById('navbar');
+        menuIcon.classList.toggle('active');
+        navbar.classList.toggle9('active');
+    }
+    </script>
+
+</body>
+</html>
