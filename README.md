@@ -1,3 +1,19 @@
 # Site-de-Viagem
 
-<img src="blob:https://web.whatsapp.com/e7546de2-f50a-431a-b000-f245a9cca673">
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=9061c2&height=120&section=header"/>
+
+- 💻 Site de Viagem com HTML, CSS e JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+<img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=9061c2&height=120&section=footer"/>
+
